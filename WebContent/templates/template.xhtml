@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Address Book</title>	
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap-theme.min.css" />	
+	<h:outputStylesheet library="css" name="style.css" />	
+	
+	<h:outputScript library="js" name="jquery-1.11.0.min.js" />		
+	<h:outputScript library="js" name="bootstrap.min.js" />
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+</h:head>
+<h:body>
+
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+	  	<div class="navbar-header">	      
+	      <a class="navbar-brand" href="#">Address Book</a>
+	    </div>
+	    <div class="collapse navbar-collapse">
+	    	<h:form>	
+			    <ul class="nav navbar-nav navbar-right">			    			    	
+			    </ul>
+		    </h:form>
+	    </div>
+	  </div>
+	</nav>
+		
+	<div id="content">
+		<ui:insert name="content" />
+	</div>
+	
+</h:body>
+</html>

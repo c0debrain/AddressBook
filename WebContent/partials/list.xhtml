@@ -1,0 +1,45 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<h:panelGroup id="list">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Endereço</th>
+					<th></th>
+				</tr>
+			</thead>	
+			<tbody>	
+				<ui:repeat var="person" value="#{personController.people}">
+					<tr>
+						<td>
+							<h:outputText value="#{person.name}" />
+						</td>				
+						<td>
+							<h:outputText value="#{person.formattedAddress}" />
+						</td>
+						<td>
+							<a href="#" class="btn btn-success address-map" data-address="#{person.formattedAddress}">Ver Localização</a>
+							
+							<h:outputText value=" " />
+																						
+							<h:commandButton styleClass="btn btn-primary" value="Editar" action="#{personController.edit(person)}">
+								<f:ajax render=":person-form:person-fields" onevent="openPersonModal"/>
+							</h:commandButton>
+							
+							<h:outputText value=" " />
+							
+							<h:commandButton styleClass="btn btn-danger" value="Excluir" action="#{personController.delete(person)}" onclick="return confirm('Tem certeza que deseja excluir o registro?');">
+								<f:ajax render=":person-form"/>
+							</h:commandButton>
+						</td>
+					</tr>
+				</ui:repeat>
+			</tbody>
+		</table>
+	</h:panelGroup>
+
+</ui:composition>
