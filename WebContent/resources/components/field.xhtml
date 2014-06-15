@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsp/jstl/core">
+	
+	<cc:interface>
+		<cc:attribute name="inputId" required="true" />
+		<cc:attribute name="label" required="true" />
+		<cc:attribute name="value" required="true" />
+	</cc:interface>
+	
+	<cc:implementation>
+		<div class="form-group">
+			<h:outputLabel value="#{cc.attrs.label}" for="#{cc.attrs.inputId}" />
+			<h:inputText styleClass="form-control" id="#{cc.attrs.inputId}" value="#{cc.attrs.value}">
+				<cc:insertChildren />
+			</h:inputText>
+			
+			<div class="text-danger"><h:message for="#{cc.attrs.inputId}" /></div>
+		</div>
+	</cc:implementation>
+
+</html>

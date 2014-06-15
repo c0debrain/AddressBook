@@ -27,7 +27,7 @@
 							<h:outputText value=" " />
 																						
 							<h:commandButton styleClass="btn btn-primary" value="Editar" action="#{personController.edit(person)}">
-								<f:ajax render=":person-form:person-fields" onevent="openPersonModal"/>
+								<f:ajax render=":person-form:person-modal:person-fields" onevent="openPersonModal"/>
 							</h:commandButton>
 							
 							<h:outputText value=" " />
