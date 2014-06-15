@@ -1,0 +1,14 @@
+<ui:composition template="/templates/template.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:ab="http://java.sun.com/jsf/composite/components">
+	
+	<ui:define name="content">
+				
+		<ab:gmap id="map1" address="florianópolis" style="width: 300px; height: 300px; display: inline-block;" />
+		<ab:gmap id="map2" address="rua bolivia, 359, francisco beltrão, pr" style="width: 300px; height: 300px; display: inline-block;" />
+		    		
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<cc:interface>
+		<cc:attribute name="address" required="true" />
+		<cc:attribute name="mapId" required="true" />
+		<cc:attribute name="text" required="true" />				
+	</cc:interface>
+	
+	<cc:implementation>			
+		<a href="#" class="btn btn-success address-map" data-address="#{cc.attrs.address}" data-map-id="#{cc.attrs.mapId}">#{cc.attrs.text}</a>		
+	</cc:implementation>
+
+</html>
