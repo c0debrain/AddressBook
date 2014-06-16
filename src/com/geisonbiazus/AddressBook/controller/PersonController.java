@@ -1,4 +1,4 @@
-package com.geisonbiazus.AddressBook.lib;
+package com.geisonbiazus.AddressBook.controller;
 
 import java.util.List;
 
